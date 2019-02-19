@@ -28,12 +28,17 @@ fi
 
 if [ -e "/tmp/thales/thales.txt" ]; 
 then
-echo "o diretório foi criado"
+echo "o arquivo foi criado"
 else 
-echo "o diretório não foi criado"
+echo "o arquivo não foi criado"
 touch /tmp/thales/thales.txt
 fi
 
-
+if [ -r "/tmp/thales/thales.txt" ]; 
+then
+echo "o arquivo tem permissão para leitura"
+else 
+echo "o arquivo não tem permissão para leitura"
+fi
 
 
